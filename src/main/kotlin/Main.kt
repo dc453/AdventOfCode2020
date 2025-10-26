@@ -1,16 +1,15 @@
 package io.github.dc453
 
+import java.io.File
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+    // Day 1
+    val day1Input = File("src/main/inputs/Day01.txt").readText()
+    val expenseReport = ExpenseReport(day1Input)
+    val day1Part1 = expenseReport.getMultiple()
+    println("Day 1, Part 1: $day1Part1")
+
 }
