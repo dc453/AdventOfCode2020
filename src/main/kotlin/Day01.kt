@@ -16,4 +16,16 @@ class ExpenseReport(val input: String = "") {
         return 0
     }
 
+    fun getMultipleOf3(): Int {
+        report.forEach { itemX ->
+            report.forEach { itemY ->
+                val difference = 2020 - itemX - itemY
+                if (report.contains(difference)) {
+                    return itemX * itemY * difference
+                }
+            }
+        }
+        return 0
+    }
+
 }

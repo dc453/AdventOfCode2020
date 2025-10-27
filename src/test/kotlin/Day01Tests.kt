@@ -18,9 +18,15 @@ class Day01Tests {
     }
 
     @Test
-    fun `should multiply items that sum to 2020`() {
+    fun `should multiply 2 items that sum to 2020`() {
         val result = expenseReport.getMultiple()
         assertEquals(514579, result)
+    }
+
+    @Test
+    fun `should multiply 3 items that sum to 2020`() {
+        val result = expenseReport.getMultipleOf3()
+        assertEquals(241861950, result)
     }
 
 }

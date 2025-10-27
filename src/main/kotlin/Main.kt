@@ -11,5 +11,7 @@ fun main() {
     val expenseReport = ExpenseReport(day1Input)
     val day1Part1 = expenseReport.getMultiple()
     println("Day 1, Part 1: $day1Part1")
+    val day1Part2 = expenseReport.getMultipleOf3()
+    println("Day 1, Part 2: $day1Part2")
 
 }
