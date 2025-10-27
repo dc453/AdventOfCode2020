@@ -14,4 +14,10 @@ fun main() {
     val day1Part2 = expenseReport.getMultipleOf3()
     println("Day 1, Part 2: $day1Part2")
 
+    // Day 2
+    val day2Input = File("src/main/inputs/Day02.txt").readText()
+    val passwordValidator = PasswordValidator(day2Input)
+    val day2Part1 = passwordValidator.getNumValidPasswords()
+    println("Day 2, Part 1: $day2Part1")
+
 }
