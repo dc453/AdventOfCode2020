@@ -19,5 +19,8 @@ fun main() {
     val passwordValidator = PasswordValidator(day2Input)
     val day2Part1 = passwordValidator.getNumValidPasswords()
     println("Day 2, Part 1: $day2Part1")
+    val passwordValidatorWithNewPolicy = PasswordValidator(day2Input, true)
+    val day2Part2 = passwordValidatorWithNewPolicy.getNumValidPasswords()
+    println("Day 2, Part 2: $day2Part2")
 
 }
