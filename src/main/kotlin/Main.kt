@@ -26,8 +26,9 @@ fun main() {
     // Day 3
     val day3Input = File("src/main/inputs/Day03.txt").readText()
     val tobogganMap = TobogganMap(day3Input)
-    tobogganMap.countTrees()
-    val day3Part1 = tobogganMap.numTrees
+    val day3Part1 = tobogganMap.countTrees()
     println("Day 3, Part 1: $day3Part1")
+    val day3Part2 = tobogganMap.countTreesOnAllSlopes()
+    println("Day 3, Part 2: $day3Part2")
 
 }
