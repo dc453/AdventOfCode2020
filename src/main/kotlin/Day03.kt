@@ -1,7 +1,5 @@
 package io.github.dc453
 
-import java.math.BigInteger
-
 class TobogganMap(input: String) {
 
     private val map = input.split("\n")

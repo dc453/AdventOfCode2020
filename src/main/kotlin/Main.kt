@@ -31,4 +31,10 @@ fun main() {
     val day3Part2 = tobogganMap.countTreesOnAllSlopes()
     println("Day 3, Part 2: $day3Part2")
 
+    // Day 4
+    val day4Input = File("src/main/inputs/Day04.txt").readText()
+    val passportValidator = PassportValidator(day4Input)
+    val day4Part1 = passportValidator.getValidPassports()
+    println("Day 4, Part 1: $day4Part1")
+
 }
