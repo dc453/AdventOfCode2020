@@ -44,5 +44,7 @@ fun main() {
     val seatFinder = SeatFinder(day5Input)
     val day5Part1 = seatFinder.findHighestSeat()
     println("Day 5, Part 1: $day5Part1")
+    val day5Part2 = seatFinder.findSeatWithoutBoardingPass()
+    println("Day 5, Part 2: $day5Part2")
 
 }

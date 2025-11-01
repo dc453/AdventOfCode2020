@@ -38,10 +38,25 @@ class SeatFinder(input: String = "") {
     }
 
     fun findHighestSeat(): Int {
-        return boardingPasses.map { findSeat(it) }.maxOf { it }
+        return getFilledSeats().maxOf { it }
     }
 
-    fun resetPosition() {
+    private fun getFilledSeats(): List<Int> = boardingPasses
+        .map { findSeat(it) }
+        .sorted()
+
+    fun findSeatWithoutBoardingPass(seats: List<Int> = listOf()): Int {
+        val filledSeats = seats.ifEmpty { getFilledSeats() }
+        filledSeats.forEach { seat ->
+            if (!filledSeats.contains(seat + 1) && filledSeats.contains(seat + 2)) {
+                return seat + 1
+            }
+        }
+        return 0
+    }
+
+
+    private fun resetPosition() {
         rowMin = ROW_MIN
         rowMax = ROW_MAX
         colMin = COL_MIN

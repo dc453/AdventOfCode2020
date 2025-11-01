@@ -88,4 +88,11 @@ class Day05Tests {
         assertEquals(820, result)
     }
 
+    @Test
+    fun `should locate seat without boarding pass`() {
+        val finder = SeatFinder()
+        val result = finder.findSeatWithoutBoardingPass(listOf(1, 2, 4, 5))
+        assertEquals(3, result)
+    }
+
 }
