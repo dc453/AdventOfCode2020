@@ -36,5 +36,7 @@ fun main() {
     val passportValidator = PassportValidator(day4Input)
     val day4Part1 = passportValidator.getValidPassports()
     println("Day 4, Part 1: $day4Part1")
+    val day4Part2 = passportValidator.getValidStrictPassports()
+    println("Day 4, Part 2: $day4Part2")
 
 }
