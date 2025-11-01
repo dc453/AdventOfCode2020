@@ -39,4 +39,10 @@ fun main() {
     val day4Part2 = passportValidator.getValidStrictPassports()
     println("Day 4, Part 2: $day4Part2")
 
+    // Day 5
+    val day5Input = File("src/main/inputs/Day05.txt").readText()
+    val seatFinder = SeatFinder(day5Input)
+    val day5Part1 = seatFinder.findHighestSeat()
+    println("Day 5, Part 1: $day5Part1")
+
 }
