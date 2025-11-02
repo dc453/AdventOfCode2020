@@ -52,5 +52,8 @@ fun main() {
     val customsForm = CustomsDeclarationForm(day6Input)
     val day6Part1 = customsForm.getTotalYesAnswers()
     println("Day 6, Part 1: $day6Part1")
+    val customsFormUnanimous = CustomsDeclarationForm(day6Input, true)
+    val day6Part2 = customsFormUnanimous.getTotalYesAnswers()
+    println("Day 6, Part 2: $day6Part2")
 
 }

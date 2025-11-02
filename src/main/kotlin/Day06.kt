@@ -1,11 +1,22 @@
 package io.github.dc453
 
-class CustomsDeclarationForm(val input: String = "") {
+class CustomsDeclarationForm(val input: String = "", val unanimousMode: Boolean = false) {
 
     fun getNumYesAnswers(group: String): Int {
-        return group.toSet()
+        val uniqueAnswers = group.toSet()
             .filter { it != '\n' }
-            .size
+
+        if (unanimousMode) {
+            var numUnanimous: Int = 0
+            uniqueAnswers.forEach { answer ->
+                if (group.filter { it == answer }.length == group.split("\n").size) {
+                    numUnanimous += 1
+                }
+            }
+            return numUnanimous
+        }
+
+        return uniqueAnswers.size
     }
 
     fun getNumYesAnswersForGroups(): List<Int> {

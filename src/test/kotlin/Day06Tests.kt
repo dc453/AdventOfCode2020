@@ -32,7 +32,7 @@ class Day06Tests {
     }
 
     @Test
-    fun `should total number of unique yes answers`() {
+    fun `should total number of unique yes answers in group`() {
         val form = CustomsDeclarationForm("abc\n" +
                 "\n" +
                 "a\n" +
@@ -50,6 +50,28 @@ class Day06Tests {
                 "b")
         val result = form.getTotalYesAnswers()
         assertEquals(11, result)
+    }
+
+    @Test
+    fun `should total number of universal yes answers in group`() {
+        val form = CustomsDeclarationForm("abc\n" +
+                "\n" +
+                "a\n" +
+                "b\n" +
+                "c\n" +
+                "\n" +
+                "ab\n" +
+                "ac\n" +
+                "\n" +
+                "a\n" +
+                "a\n" +
+                "a\n" +
+                "a\n" +
+                "\n" +
+                "b",
+            true)
+        val result = form.getTotalYesAnswers()
+        assertEquals(6, result)
     }
 
 }
