@@ -47,4 +47,10 @@ fun main() {
     val day5Part2 = seatFinder.findSeatWithoutBoardingPass()
     println("Day 5, Part 2: $day5Part2")
 
+    // Day 6
+    val day6Input = File("src/main/inputs/Day06.txt").readText()
+    val customsForm = CustomsDeclarationForm(day6Input)
+    val day6Part1 = customsForm.getTotalYesAnswers()
+    println("Day 6, Part 1: $day6Part1")
+
 }
