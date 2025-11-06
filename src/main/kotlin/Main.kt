@@ -56,4 +56,10 @@ fun main() {
     val day6Part2 = customsFormUnanimous.getTotalYesAnswers()
     println("Day 6, Part 2: $day6Part2")
 
+    // Day 7
+    val day7Input = File("src/main/inputs/Day07.txt").readText()
+    val bagProcessor = BagProcessor(day7Input)
+    val day7Part1 = bagProcessor.getNumGoldBagHolders()
+    println("Day 7, Part 1: $day7Part1")
+
 }
